@@ -17,5 +17,29 @@
     <h3>
       Обновление
     </h3>
+    function show2() {
+      //debugger;
+         //input.value = `${randInt(0, 255)}, ${randInt(0, 255)}, ${randInt(0, 255)}`;
+      st = input.value;
+    
+        function Call(arr, myFunc){
+        myFunc(arr);
+        }; 
+    //========== метод push forEach ====================
+        function CallB(arr){ 
+        let arr2 = [];
+        let arr3 = [];
+          arr.forEach(a => (arr2.push(a*10)));
+        for (let i = 0; i< arr2.length; i++){
+          arr3.push(arr2[i]*2); 
+        }
+        return arr3;
+        };
+    
+        let arr1 = st.split(',');
+        Call(arr1, CallB);
+        document.querySelector('.ContFunct2').innerHTML = CallB(arr1);
+        document.querySelector('.ContFunct2').style.background = `rgb(${randInt(0, 255)}, ${randInt(0, 255)}, ${randInt(0, 255)})`;
+    }
   </body>
 </html>
